@@ -1,2 +1,2 @@
 ---
-Tough time **never** lasts only tough people last.
+Tough time **never** last only tough people last
