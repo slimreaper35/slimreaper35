@@ -2,5 +2,5 @@
 
 ---
 
-![GitHub stats](https://github-readme-stats.vercel.app/api?username=slimreaper35&show_icons=true&theme=shadow-red)
+![GitHub stats](https://github-readme-stats.vercel.app/api?username=slimreaper35&show_icons=true&theme=shadow_red)
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=slimreaper35&layout=donut)
