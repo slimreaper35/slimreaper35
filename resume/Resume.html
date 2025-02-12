@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Resume</title>
+    <style>
+      @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+      @import url("https://fonts.googleapis.com/css?family=Zilla+Slab:400,400i,600,600i,700,700i");
+      @import url("https://fonts.googleapis.com/css?family=Barlow+Condensed:400,400i,600,600i,700,700i");
+      @import url("https://fonts.googleapis.com/css?family=Inter:400,400i,600,600i,700,700i");
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        font-size: 8px;
+      }
+      body {
+        color: #444;
+        font-family: "Zilla Slab", "Inter", "Noto Sans SC";
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 1.7;
+        padding: 48px;
+      }
+
+      @media print {
+        @page {
+          margin: 0;
+        }
+        body {
+          width: auto;
+          height: auto;
+        }
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Barlow Condensed", "Inter", "Noto Sans SC";
+        font-weight: bold;
+      }
+      h1 {
+        font-size: 3.6rem;
+        font-weight: normal;
+        margin-top: 0;
+        text-align: left;
+      }
+      h2 {
+        font-size: 2.4rem;
+        margin-top: 1em;
+      }
+      h3 {
+        font-size: 2rem;
+        margin-top: 0.5em;
+      }
+      h4,
+      h5,
+      h6 {
+        font-size: 1.8rem;
+        margin-top: 0.4em;
+      }
+      b,
+      strong {
+        font-weight: bold;
+      }
+      i,
+      em {
+        font-style: italic;
+      }
+      ul,
+      ol {
+        margin-top: 0.5em;
+        list-style-type: none;
+      }
+      ul li:before,
+      ol li:before {
+        content: "-";
+        font-weight: bold;
+        margin-right: 0.5em;
+      }
+      h3 + ul {
+        margin-top: 0;
+      }
+      code {
+        background-color: rgba(32, 170, 234, 0.25);
+        font-family: inherit;
+      }
+      pre {
+        font-family: inherit;
+      }
+      pre code {
+        display: block;
+      }
+      p {
+        margin-top: 0.5em;
+      }
+      p.pull-right {
+        float: right;
+        margin-right: 4px;
+        margin-top: -1.7em;
+        text-align: right;
+      }
+      h3 + p {
+        margin-top: 0.2em;
+      }
+      li > p {
+        margin-top: 0;
+      }
+      table {
+        margin-top: 0.5em;
+        table-layout: fixed;
+        width: 100%;
+      }
+      table th,
+      table tr {
+        font-weight: normal;
+      }
+      hr {
+        border: none;
+        border-top: 1px solid #ddd;
+        margin: 1em 0;
+      }
+      .row.row--section {
+        display: flex;
+      }
+      .row.row--section .column.column--1-1 {
+        flex: 100%;
+      }
+      .row.row--section .column.column--1-2 {
+        flex: 66%;
+        padding-right: 3rem;
+      }
+      .row.row--section .column.column--2-2 {
+        flex: 34%;
+        padding-left: 3rem;
+      }
+      h1 {
+        color: #111;
+        font-size: 4rem;
+        font-weight: normal;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+      h2 {
+        color: #111;
+        font-size: 3rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin-bottom: -1rem;
+        margin-top: 0.5em;
+        text-transform: uppercase;
+      }
+      h3 {
+        color: #20aaea;
+        font-family: "Zilla Slab", "Inter", "Noto Sans SC";
+        font-size: 2rem;
+        font-weight: 600;
+      }
+      b,
+      strong {
+        font-weight: 600;
+      }
+      h1 b,
+      h1 strong {
+        font-weight: 700;
+      }
+      ul {
+        padding-left: 16px;
+      }
+      ul li {
+        list-style-type: none;
+        position: relative;
+      }
+      ul li:before {
+        color: #222;
+        content: "–";
+        left: -16px;
+        position: absolute;
+      }
+      a {
+        border-bottom: 1px solid rgba(32, 170, 234, 0.6);
+        color: #222;
+        text-decoration: none;
+      }
+      code {
+        background-color: rgba(32, 170, 234, 0.25);
+        border-radius: 12px;
+        color: #111;
+        margin-right: 4px;
+        padding: 0 6px;
+      }
+      .contact-info i {
+        font-size: 1.2em;
+        margin-right: 5px;
+        color: #20aaea;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 style="text-align: center"><strong>Michal Šoltis</strong></h1>
+    <hr />
+    <div class="contact-info">
+      <table>
+        <tbody>
+          <tr>
+            <td align="left"><i class="fas fa-phone"></i>+421 944 211 540</td>
+            <td align="center">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:soltis.miso@gmail.com">soltis.miso@gmail.com</a>
+            </td>
+            <td align="right">
+              <i class="fab fa-github"></i>
+              <a href="https://github.com/slimreaper35"
+                >github.com/slimreaper35</a
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <hr />
+    <h2>Work Experience</h2>
+    <h3>Red Hat</h3>
+    <p class="pull-right"><em>Brno, Czechia</em></p>
+    <p><strong>Software Engineer</strong></p>
+    <p class="pull-right"><em>February 2023 - Present</em></p>
+    <p>
+      I have been part of the team that develops various components of the
+      internal secure software supply chain pipeline. Specifically, I have been
+      working on an open-source project that enables building container images
+      without access to the internet and makes the build process safe,
+      reproducible, and auditable.
+    </p>
+    <h4>Skills</h4>
+    <p>
+      <code>Python</code> <code>Go</code> <code>Linux</code> <code>Bash</code>
+      <code>Docker</code> <code>OpenShift</code> <code>Tekton</code>
+      <code>Scrum</code> <code>Kanban</code> <code>Jira</code>
+    </p>
+    <h3>Faculty of Informatics, Masaryk University</h3>
+    <p class="pull-right"><em>Brno, Czechia</em></p>
+    <p><strong>Teaching Assistant</strong></p>
+    <p class="pull-right"><em>February 2022 - January 2024</em></p>
+    <p>
+      During my studies, I helped with organizing several courses at the
+      faculty. I provided code reviews for younger students and graded their
+      assignments based on the code quality. Additionally, I prepared materials
+      and conducted a couple of seminars. This experience improved my
+      communication and presentation skills.
+    </p>
+    <h3>Nokia</h3>
+    <p class="pull-right"><em>Bratislava, Slovakia</em></p>
+    <p><strong>Software Test Engineer</strong></p>
+    <p class="pull-right"><em>July 2022 - June 2023</em></p>
+    <p>
+      I maintained automated testing frameworks for a network infrastructure
+      project, gaining practical experience in software-defined networking, and
+      network security protocols.
+    </p>
+    <h4>Skills</h4>
+    <p>
+      <code>SDN</code> <code>SD-WAN</code> <code>Cryptography</code>
+      <code>Security</code> <code>Linux</code>
+    </p>
+    <h3>Slovak Billiards Federation</h3>
+    <p class="pull-right"><em>Europe</em></p>
+    <p><strong>Amateur pool player</strong></p>
+    <p class="pull-right"><em>January 2015 - December 2019</em></p>
+    <ul>
+      <li>
+        <p>4x Slovak Junior Championships winner</p>
+      </li>
+      <li>
+        <p>3x European Pool Championships participant</p>
+      </li>
+    </ul>
+    <h4>Skills</h4>
+    <p>
+      Being a competitive pool player requires a strong sense of discipline,
+      focus, and determination to work hard and improve - qualities that are
+      essential in any professional environment.
+    </p>
+    <h2>Education</h2>
+    <h3>Certificates</h3>
+    <p>
+      <a
+        href="https://www.credly.com/badges/b24a71d4-26cd-4399-bb1b-bee764f9820c"
+      >
+        <strong>Red Hat Certified Specialist in Containers</strong></a
+      >
+    </p>
+    <p>
+      <a
+        href="https://www.credly.com/badges/c6d8afe5-77b3-42eb-8aac-81c6113f417e"
+      >
+        <strong>Red Hat Certified Engineer</strong></a
+      >
+    </p>
+    <p>
+      <a
+        href="https://www.credly.com/badges/b19a391b-c55c-4618-9e47-5ffa0b4801e0"
+      >
+        <strong>Red Hat Certified System Administrator</strong></a
+      >
+    </p>
+    <p>
+      <a
+        href="https://drive.google.com/file/d/1-i8DV9Ce7Y4YBwD0BO6KbJJFUZ5fN9vk/view?usp=drive_link"
+      >
+        <strong>Deutsches Sprachdiplom (DSD)</strong></a
+      >
+    </p>
+    <h3>University</h3>
+    <p><strong>Faculty of Informatics, Masaryk University</strong></p>
+    <p class="pull-right"><em>Brno, Czechia</em></p>
+    <p>Programming and application development</p>
+    <p class="pull-right"><em>September 2020 - June 2024</em></p>
+    <h4>Skills</h4>
+    <p>
+      <code>Haskell</code> <code>C/C++</code> <code>Rust</code>
+      <code>Python</code> <code>Java</code> <code>C#</code> <code>SQL</code>
+      <code>TypeScript</code> <code>React</code> <code>Perl</code>
+      <code>Assembly</code> <code>Docker</code>
+    </p>
+    <p>
+      Please note that a university should provide students with an education
+      and a solid foundation for their future. It is not supposed to teach the
+      latest and most popular technologies The skills above are just a few
+      examples of what I encountered at the university. They should be replaced
+      with algorithms, data structures, OOP, or math. These form the
+      comprehensive knowledge of computer science and software engineering.
+    </p>
+    <p>
+      I am confident that I can learn any programming language or technology. I
+      believe the ability to write clean code and solve problems is not bound to
+      a specific programming language.
+    </p>
+  </body>
+</html>
