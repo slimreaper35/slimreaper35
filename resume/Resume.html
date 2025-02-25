@@ -7,23 +7,24 @@
       @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
       @import url("https://fonts.googleapis.com/css?family=Zilla+Slab:400,400i,600,600i,700,700i");
       @import url("https://fonts.googleapis.com/css?family=Barlow+Condensed:400,400i,600,600i,700,700i");
-      @import url("https://fonts.googleapis.com/css?family=Inter:400,400i,600,600i,700,700i");
-      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap");
+
       * {
         margin: 0;
-        padding: 0;
       }
+
       html {
         font-size: 8px;
       }
+
       body {
         color: #444;
         font-family: "Zilla Slab", "Inter", "Noto Sans SC";
-        font-size: 1.8rem;
+        font-size: 12px;
         font-style: normal;
-        font-weight: normal;
         line-height: 1.7;
         padding: 48px;
+        padding-top: 16px;
+        padding-bottom: 16px;
       }
 
       @media print {
@@ -39,164 +40,104 @@
       h1,
       h2,
       h3,
-      h4,
-      h5,
-      h6 {
+      h4 {
         font-family: "Barlow Condensed", "Inter", "Noto Sans SC";
         font-weight: bold;
       }
-      h1 {
-        font-size: 3.6rem;
-        font-weight: normal;
-        margin-top: 0;
-        text-align: left;
-      }
-      h2 {
-        font-size: 2.4rem;
-        margin-top: 1em;
-      }
-      h3 {
-        font-size: 2rem;
-        margin-top: 0.5em;
-      }
-      h4,
-      h5,
-      h6 {
-        font-size: 1.8rem;
-        margin-top: 0.4em;
-      }
-      b,
-      strong {
-        font-weight: bold;
-      }
-      i,
-      em {
-        font-style: italic;
-      }
-      ul,
-      ol {
-        margin-top: 0.5em;
-        list-style-type: none;
-      }
-      ul li:before,
-      ol li:before {
-        content: "-";
-        font-weight: bold;
-        margin-right: 0.5em;
-      }
-      h3 + ul {
-        margin-top: 0;
-      }
-      code {
-        background-color: rgba(32, 170, 234, 0.25);
-        font-family: inherit;
-      }
-      pre {
-        font-family: inherit;
-      }
-      pre code {
-        display: block;
-      }
-      p {
-        margin-top: 0.5em;
-      }
-      p.pull-right {
-        float: right;
-        margin-right: 4px;
-        margin-top: -1.7em;
-        text-align: right;
-      }
-      h3 + p {
-        margin-top: 0.2em;
-      }
-      li > p {
-        margin-top: 0;
-      }
-      table {
-        margin-top: 0.5em;
-        table-layout: fixed;
-        width: 100%;
-      }
-      table th,
-      table tr {
-        font-weight: normal;
-      }
-      hr {
-        border: none;
-        border-top: 1px solid #ddd;
-        margin: 1em 0;
-      }
-      .row.row--section {
-        display: flex;
-      }
-      .row.row--section .column.column--1-1 {
-        flex: 100%;
-      }
-      .row.row--section .column.column--1-2 {
-        flex: 66%;
-        padding-right: 3rem;
-      }
-      .row.row--section .column.column--2-2 {
-        flex: 34%;
-        padding-left: 3rem;
-      }
+
       h1 {
         color: #111;
-        font-size: 4rem;
-        font-weight: normal;
+        font-size: 30px;
         letter-spacing: 2px;
         text-transform: uppercase;
       }
+
       h2 {
         color: #111;
-        font-size: 3rem;
-        font-weight: 600;
+        font-size: 18px;
         letter-spacing: 1px;
-        margin-bottom: -1rem;
+        font-weight: 600;
+        margin-bottom: -0.5rem;
         margin-top: 0.5em;
         text-transform: uppercase;
       }
+
       h3 {
         color: #20aaea;
         font-family: "Zilla Slab", "Inter", "Noto Sans SC";
-        font-size: 2rem;
+        font-size: 14px;
         font-weight: 600;
+        margin-top: 0.5em;
       }
-      b,
-      strong {
-        font-weight: 600;
+
+      h4 {
+        font-size: 14px;
+        margin-top: 0.4em;
       }
-      h1 b,
-      h1 strong {
-        font-weight: 700;
+
+      ul,
+      ol,
+      p {
+        margin-top: 0.5em;
       }
+
       ul {
+        list-style-type: none;
         padding-left: 16px;
       }
+
       ul li {
-        list-style-type: none;
         position: relative;
       }
+
       ul li:before {
         color: #222;
         content: "–";
         left: -16px;
         position: absolute;
       }
+
+      p.pull-right {
+        margin-top: -1.7em;
+        text-align: right;
+      }
+
+      table {
+        width: 100%;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ddd;
+        margin: 0.5em;
+      }
+
+      b,
+      strong {
+        font-weight: 600;
+      }
+
+      li > p {
+        margin-top: 0;
+      }
+
       a {
         border-bottom: 1px solid rgba(32, 170, 234, 0.6);
         color: #222;
         text-decoration: none;
       }
+
       code {
         background-color: rgba(32, 170, 234, 0.25);
         border-radius: 12px;
         color: #111;
         margin-right: 4px;
-        padding: 0 6px;
+        padding: 2px 8px;
+        font-family: inherit;
       }
+
       .contact-info i {
-        font-size: 1.2em;
+        font-size: 12px;
         margin-right: 5px;
         color: #20aaea;
       }
@@ -210,12 +151,15 @@
       <table>
         <tbody>
           <tr>
-            <td align="left"><i class="fas fa-phone"></i>+421 944 211 540</td>
             <td align="center">
               <i class="fas fa-envelope"></i>
               <a href="mailto:soltis.miso@gmail.com">soltis.miso@gmail.com</a>
             </td>
-            <td align="right">
+            <td align="center"><i class="fas fa-phone"></i>+421 944 211 540</td>
+            <td align="center">
+              <i class="fas fa-map-marker-alt"></i>Digital nomad
+            </td>
+            <td align="center">
               <i class="fab fa-github"></i>
               <a href="https://github.com/slimreaper35"
                 >github.com/slimreaper35</a
@@ -228,8 +172,6 @@
     <hr />
     <h2>Work Experience</h2>
     <h3>Red Hat</h3>
-    <p class="pull-right"><em>Brno, Czechia</em></p>
-    <p><strong>Software Engineer</strong></p>
     <p class="pull-right"><em>February 2023 - Present</em></p>
     <p>
       I have been part of the team that develops various components of the
@@ -245,8 +187,6 @@
       <code>Scrum</code> <code>Kanban</code> <code>Jira</code>
     </p>
     <h3>Faculty of Informatics, Masaryk University</h3>
-    <p class="pull-right"><em>Brno, Czechia</em></p>
-    <p><strong>Teaching Assistant</strong></p>
     <p class="pull-right"><em>February 2022 - January 2024</em></p>
     <p>
       During my studies, I helped with organizing several courses at the
@@ -256,8 +196,6 @@
       communication and presentation skills.
     </p>
     <h3>Nokia</h3>
-    <p class="pull-right"><em>Bratislava, Slovakia</em></p>
-    <p><strong>Software Test Engineer</strong></p>
     <p class="pull-right"><em>July 2022 - June 2023</em></p>
     <p>
       I maintained automated testing frameworks for a network infrastructure
@@ -268,24 +206,6 @@
     <p>
       <code>SDN</code> <code>SD-WAN</code> <code>Cryptography</code>
       <code>Security</code> <code>Linux</code>
-    </p>
-    <h3>Slovak Billiards Federation</h3>
-    <p class="pull-right"><em>Europe</em></p>
-    <p><strong>Amateur pool player</strong></p>
-    <p class="pull-right"><em>January 2015 - December 2019</em></p>
-    <ul>
-      <li>
-        <p>4x Slovak Junior Championships winner</p>
-      </li>
-      <li>
-        <p>3x European Pool Championships participant</p>
-      </li>
-    </ul>
-    <h4>Skills</h4>
-    <p>
-      Being a competitive pool player requires a strong sense of discipline,
-      focus, and determination to work hard and improve - qualities that are
-      essential in any professional environment.
     </p>
     <h2>Education</h2>
     <h3>Certificates</h3>
@@ -319,8 +239,6 @@
     </p>
     <h3>University</h3>
     <p><strong>Faculty of Informatics, Masaryk University</strong></p>
-    <p class="pull-right"><em>Brno, Czechia</em></p>
-    <p>Programming and application development</p>
     <p class="pull-right"><em>September 2020 - June 2024</em></p>
     <h4>Skills</h4>
     <p>
@@ -335,12 +253,19 @@
       latest and most popular technologies. The skills above are just a few
       examples of what I encountered at the university. They should be replaced
       with algorithms, data structures, OOP, and math. These form the
-      comprehensive knowledge of computer science and software engineering.
-    </p>
-    <p>
-      I am confident that I can learn any programming language or technology. I
+      comprehensive knowledge of computer science and software engineering. I am
+      confident that I can learn any programming language or technology. I
       believe the ability to write clean code and solve problems is not bound to
       a specific programming language.
     </p>
+    <h2>Achievements</h2>
+    <ul>
+      <li>
+        <p>4x Slovak Junior Pool Championships winner</p>
+      </li>
+      <li>
+        <p>3x European Pool Championships participant</p>
+      </li>
+    </ul>
   </body>
 </html>
