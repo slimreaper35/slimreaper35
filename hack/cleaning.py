@@ -21,7 +21,6 @@ FONT_SIZE = 24
 PAGE_SIZE = A4
 OUTPUT_FILENAME = "upratovanie.pdf"
 
-# private data
 NAMES = [
     "Poníková",
     "Kolarčík",
