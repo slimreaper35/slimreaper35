@@ -1,164 +1,142 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <title>Resume</title>
     <style>
+      /* icons */
       @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
-      @import url("https://fonts.googleapis.com/css?family=Barlow+Condensed:400,400i,600,600i,700,700i");
 
-      * {
-        margin: 0;
-      }
-
-      html {
-        font-size: 8px;
-      }
-
-      body {
-        color: #444;
-        font-family: "Zilla Slab", "Inter", "Noto Sans SC";
-        font-size: 12px;
-        font-style: normal;
-        line-height: 1.7;
-        padding: 48px;
-        padding-top: 16px;
-        padding-bottom: 16px;
-      }
-
+      /* print style */
       @media print {
         @page {
           margin: 0;
         }
-        body {
-          width: auto;
-          height: auto;
-        }
       }
 
-      h1,
-      h2,
-      h3,
-      h4 {
-        font-family: "Barlow Condensed", "Inter", "Noto Sans SC";
-        font-weight: bold;
+      /* variables */
+      :root {
+        --main-color: #20aaea;
+        --code-color: #20aaea40;
+        --a-color: #20aaea99;
+        --hr-color: #ddd;
+        --body-color: #444;
       }
 
-      h1 {
-        color: #111;
-        font-size: 30px;
-        letter-spacing: 2px;
-        text-transform: uppercase;
+      /* all elements */
+      * {
+        margin: 0;
       }
 
-      h2 {
-        color: #111;
-        font-size: 18px;
-        letter-spacing: 1px;
-        font-weight: 600;
-        margin-bottom: -0.5rem;
-        margin-top: 0.5em;
-        text-transform: uppercase;
-      }
-
-      h3 {
-        color: #20aaea;
-        font-family: "Zilla Slab", "Inter", "Noto Sans SC";
-        font-size: 14px;
-        font-weight: 600;
-        margin-top: 0.5em;
-      }
-
-      h4 {
-        font-size: 14px;
-        margin-top: 0.4em;
-      }
-
-      ul,
-      ol,
-      p {
-        margin-top: 0.5em;
-      }
-
-      ul {
-        list-style-type: none;
-        padding-left: 16px;
-      }
-
-      ul li {
-        position: relative;
-      }
-
-      ul li:before {
-        color: #222;
-        content: "–";
-        left: -16px;
-        position: absolute;
-      }
-
-      p.pull-right {
-        margin-top: -1.7em;
-        text-align: right;
+      body {
+        font-family: "Inter";
+        font-size: 12px;
+        color: var(--body-color);
+        padding-left: 48px;
+        padding-right: 48px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        line-height: 2;
       }
 
       table {
         width: 100%;
       }
 
-      hr {
-        border: none;
-        border-top: 1px solid #ddd;
-        margin: 0.5em;
+      td {
+        text-align: center;
       }
 
-      b,
       strong {
         font-weight: 600;
       }
 
-      li > p {
-        margin-top: 0;
+      /* name */
+      h1 {
+        font-size: 24px;
+        text-transform: uppercase;
+        text-align: center;
       }
 
-      a {
-        border-bottom: 1px solid rgba(32, 170, 234, 0.6);
-        color: #222;
-        text-decoration: none;
+      /* sections */
+      h2 {
+        font-size: 16px;
+        text-transform: uppercase;
       }
 
-      code {
-        background-color: rgba(32, 170, 234, 0.25);
-        border-radius: 12px;
-        color: #111;
-        margin-right: 4px;
-        padding: 2px 8px;
-        font-family: inherit;
-      }
-
-      .contact-info i {
+      /* subsections */
+      h3 {
         font-size: 14px;
-        margin-right: 5px;
-        color: #20aaea;
+        color: var(--main-color);
+      }
+
+      /* skills */
+      h4 {
+        font-size: 12px;
+      }
+
+      /* skills */
+      code {
+        font-family: inherit;
+        background-color: var(--code-color);
+        border-radius: 12px;
+        margin-right: 4px;
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+      }
+
+      ul {
+        padding-left: 16px;
+      }
+
+      i {
+        font-size: 14px;
+        color: var(--main-color);
+        margin-right: 4px;
+      }
+
+      .experience-header {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      /* contact info */
+      hr {
+        border: none;
+        border-top-width: 2px;
+        border-top-style: solid;
+        border-top-color: var(--hr-color);
+        margin-top: 4px;
+        margin-bottom: 4px;
+      }
+
+      /* links */
+      a {
+        text-decoration: none;
+        color: var(--body-color);
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: var(--a-color);
       }
     </style>
   </head>
 
   <body>
-    <h1 style="text-align: center"><strong>Michal Šoltis</strong></h1>
+    <h1><strong>Bc. Michal Šoltis</strong></h1>
     <hr />
     <div class="contact-info">
       <table>
         <tbody>
           <tr>
-            <td align="center">
+            <td>
               <i class="fas fa-envelope"></i>
               <a href="mailto:soltis.miso@gmail.com">soltis.miso@gmail.com</a>
             </td>
-            <td align="center"><i class="fas fa-phone"></i>+421 944 211 540</td>
-            <td align="center">
-              <i class="fas fa-map-marker-alt"></i>Digital nomad
-            </td>
-            <td align="center">
+            <td><i class="fas fa-phone"></i>+421 944 211 540</td>
+            <td><i class="fas fa-map-marker-alt"></i>Digital nomad</td>
+            <td>
               <i class="fab fa-github"></i>
               <a href="https://github.com/slimreaper35"
                 >github.com/slimreaper35</a
@@ -170,8 +148,10 @@
     </div>
     <hr />
     <h2>Work Experience</h2>
-    <h3>Red Hat</h3>
-    <p class="pull-right"><em>02/2023 - TBD - Brno, CZ</em></p>
+    <div class="experience-header">
+      <h3>Red Hat</h3>
+      <p>02/2023 - TBD - Brno, CZ</p>
+    </div>
     <p>
       I have been part of the team that develops various components of the
       internal secure software supply chain pipeline. Specifically, I have been
@@ -185,19 +165,21 @@
       <code>Docker</code> <code>OpenShift</code> <code>Tekton</code>
       <code>Scrum</code> <code>Kanban</code> <code>Jira</code>
     </p>
-    <h3>Faculty of Informatics, Masaryk University</h3>
-    <p class="pull-right"><em>02/2022 - 01/2024 - Brno, CZ</em></p>
+    <div class="experience-header">
+      <h3>Faculty of Informatics, Masaryk University</h3>
+      <p>02/2022 - 01/2024 - Brno, CZ</p>
+    </div>
     <p>
-      During my studies, I helped with organizing several courses at the
-      faculty. I provided code reviews for younger students and graded their
-      assignments based on the code quality. Additionally, I prepared materials
-      and conducted a couple of seminars. This experience improved my
-      communication and presentation skills.
+      During my studies, I helped organize several courses for the faculty. I
+      provided code reviews for younger students and graded their assignments
+      based on the code quality. Additionally, I prepared materials and
+      conducted a couple of seminars. This experience improved my communication
+      and presentation skills.
     </p>
-    <h3>Nokia</h3>
-    <p class="pull-right">
-      <em>07/2022 - 06/2023 - Bratislava, SK</em>
-    </p>
+    <div class="experience-header">
+      <h3>Nokia</h3>
+      <p>07/2022 - 06/2023 - Bratislava, SK</p>
+    </div>
     <p>
       I maintained automated testing frameworks for a virtual network topology
       and infrastructure project, gaining practical experience in network
@@ -246,8 +228,7 @@
       >
     </p>
     <h3>University</h3>
-    <p><strong>Faculty of Informatics, Masaryk University</strong></p>
-    <p class="pull-right"><em>09/2020 - 06/2024 - Brno, CZ</em></p>
+    <p>Faculty of Informatics, Masaryk University</p>
     <h4>Skills</h4>
     <p>
       <code>Haskell</code> <code>C/C++</code> <code>Rust</code>
@@ -262,19 +243,15 @@
       technologies. The skills above are just a few examples of what I
       encountered at the university. They should be replaced with algorithms,
       data structures, OOP, and math. These skills form the comprehensive
-      knowledge of computer science and software engineering. I am confident
-      that I can learn <strong>ANY</strong> programming language or technology.
-      I believe the ability to write clean code and solve problems is
+      knowledge of computer science and software engineering. I am confident I
+      can learn <strong>ANY</strong> programming language or technology. I
+      believe the ability to write clean code and solve problems is
       <strong>NOT</strong> tied to a programming language.
     </p>
     <h2>Achievements</h2>
     <ul>
-      <li>
-        <p>4x Slovak U19 Pool Championships winner</p>
-      </li>
-      <li>
-        <p>3x European Pool Championships participant</p>
-      </li>
+      <li>4x Slovak U19 Pool Championships winner</li>
+      <li>3x European Pool Championships participant</li>
     </ul>
   </body>
 </html>

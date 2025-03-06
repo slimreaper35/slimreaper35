@@ -3,23 +3,23 @@ from collections.abc import Iterable
 
 def is_palindrome_normal(string: str) -> bool:
     """
-    Check if a string is a palindrome - reads the same forwards and backwards.
-    """
-    processed = [char.lower() for char in string if char.isalnum()]
+    Check if a string is a palindrome.
 
-    for i in range(len(processed) // 2):
-        if processed[i] != processed[-i - 1]:
+    Palindrome is a sequence of characters that reads the same forwards and backwards.
+
+    1. Iterate over the first half of the string.
+    2. Compare the character at the current index with the character at the opposite index.
+    3. If any of the characters don't match, return False.
+    4. If all characters match, return True.
+    """
+    for i in range(len(string) // 2):
+        if string[i] != string[-i - 1]:
             return False
 
     return True
 
-
-def is_palindrome_pythonic(string: str) -> bool:
-    """
-    Check if a string is a palindrome - reads the same forwards and backwards.
-    """
-    processed = [char.lower() for char in string if char.isalnum()]
-    return processed == processed[::-1]
+    # alternative:
+    # return string == string[::-1]
 
 
 def find_intersection(nums1: list[int], nums2: list[int]) -> Iterable[int]:
@@ -36,7 +36,8 @@ def fib_infinite():
     a, b = 0, 1
     while True:
         yield a
-        # OR: a, b = b, a + b
+        # alternative:
+        # a, b = b, a + b
         tmp = a
         a = b
         b = tmp + b
