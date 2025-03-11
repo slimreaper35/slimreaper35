@@ -16,11 +16,10 @@
 
       /* variables */
       :root {
-        --main-color: #20aaea;
-        --code-color: #20aaea40;
-        --a-color: #20aaea99;
-        --hr-color: #ddd;
-        --body-color: #444;
+        --base: 179, 11, 11;
+        --main-color: rgb(var(--base));
+        /* 25% opacity */
+        --code-color: rgba(var(--base), 0.25);
       }
 
       /* all elements */
@@ -31,12 +30,11 @@
       body {
         font-family: "Inter";
         font-size: 12px;
-        color: var(--body-color);
         padding-left: 48px;
         padding-right: 48px;
-        padding-top: 16px;
-        padding-bottom: 16px;
-        line-height: 2;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        line-height: 24px;
       }
 
       table {
@@ -45,10 +43,6 @@
 
       td {
         text-align: center;
-      }
-
-      strong {
-        font-weight: 600;
       }
 
       /* name */
@@ -60,7 +54,7 @@
 
       /* sections */
       h2 {
-        font-size: 16px;
+        font-size: 14px;
         text-transform: uppercase;
       }
 
@@ -81,8 +75,8 @@
         background-color: var(--code-color);
         border-radius: 12px;
         margin-right: 4px;
-        padding-left: 8px;
-        padding-right: 8px;
+        padding-left: 6px;
+        padding-right: 6px;
         padding-top: 2px;
         padding-bottom: 2px;
       }
@@ -94,7 +88,7 @@
       i {
         font-size: 14px;
         color: var(--main-color);
-        margin-right: 4px;
+        margin-right: 6px;
       }
 
       .experience-header {
@@ -107,7 +101,7 @@
         border: none;
         border-top-width: 2px;
         border-top-style: solid;
-        border-top-color: var(--hr-color);
+        border-top-color: #ddd;
         margin-top: 4px;
         margin-bottom: 4px;
       }
@@ -115,51 +109,51 @@
       /* links */
       a {
         text-decoration: none;
-        color: var(--body-color);
+        color: unset;
         border-bottom-width: 1px;
         border-bottom-style: solid;
-        border-bottom-color: var(--a-color);
+        border-bottom-color: var(--main-color);
       }
     </style>
   </head>
 
   <body>
-    <h1><strong>Bc. Michal Šoltis</strong></h1>
-    <hr />
-    <div class="contact-info">
-      <table>
-        <tbody>
-          <tr>
-            <td>
-              <i class="fas fa-envelope"></i>
-              <a href="mailto:soltis.miso@gmail.com">soltis.miso@gmail.com</a>
-            </td>
-            <td><i class="fas fa-phone"></i>+421 944 211 540</td>
-            <td><i class="fas fa-map-marker-alt"></i>Digital nomad</td>
-            <td>
-              <i class="fab fa-github"></i>
-              <a href="https://github.com/slimreaper35"
-                >github.com/slimreaper35</a
-              >
-            </td>
-          </tr>
-        </tbody>
-      </table>
+    <h1>Bc. Michal Šoltis</h1>
+    <div style="margin-top: 24px; margin-bottom: 24px">
+      <hr />
+      <div class="contact-info">
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:soltis.miso@gmail.com">soltis.miso@gmail.com</a>
+              </td>
+              <td><i class="fas fa-phone"></i>+421 944 211 540</td>
+              <td><i class="fas fa-map-marker-alt"></i>Digital nomad</td>
+              <td>
+                <i class="fab fa-github"></i>
+                <a href="https://github.com/slimreaper35"
+                  >github.com/slimreaper35</a
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <hr />
     </div>
-    <hr />
     <h2>Work Experience</h2>
     <div class="experience-header">
       <h3>Red Hat</h3>
-      <p>02/2023 - TBD - Brno, CZ</p>
+      <p><em>02/2023 - TBD - Brno, CZ</em></p>
     </div>
     <p>
       I have been part of the team that develops various components of the
       internal secure software supply chain pipeline. Specifically, I have been
       working on an open-source project that enables building container images
       without access to the internet and makes the build process safe,
-      reproducible, and auditable. My primary responsibilities have included
-      designing and implementing new features and improving the project to
-      provide a better user experience.
+      reproducible, and auditable.
     </p>
     <h4>Skills</h4>
     <p>
@@ -169,18 +163,17 @@
     </p>
     <div class="experience-header">
       <h3>Faculty of Informatics, Masaryk University</h3>
-      <p>02/2022 - 01/2024 - Brno, CZ</p>
+      <p><em>02/2022 - 01/2024 - Brno, CZ</em></p>
     </div>
     <p>
       During my studies, I provided code reviews for younger students and graded
       their assignments based on the code quality across several courses at the
       faculty. Additionally, I prepared materials and conducted a couple of
-      seminars. This experience improved my communication and presentation
-      skills.
+      seminars.
     </p>
     <div class="experience-header">
       <h3>Nokia</h3>
-      <p>07/2022 - 06/2023 - Bratislava, SK</p>
+      <p><em>07/2022 - 06/2023 - Bratislava, SK</em></p>
     </div>
     <p>
       I maintained automated testing frameworks for a virtual network topology
@@ -252,8 +245,8 @@
     </p>
     <h2>Achievements</h2>
     <ul>
-      <li>4x Slovak U19 Pool Championships winner</li>
-      <li>3x European Pool Championships participant</li>
+      <li><p>4x Slovak U19 Pool Championships winner</p></li>
+      <li><p>3x European Pool Championships participant</p></li>
     </ul>
   </body>
 </html>

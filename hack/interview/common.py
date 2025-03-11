@@ -1,4 +1,4 @@
-from collections.abc import Iterable
+from typing import Iterable
 
 
 def is_palindrome_normal(string: str) -> bool:
@@ -13,7 +13,7 @@ def is_palindrome_normal(string: str) -> bool:
     4. If all characters match, return True.
     """
     for i in range(len(string) // 2):
-        if string[i] != string[-i - 1]:
+        if string[i] != string[-1 - i]:
             return False
 
     return True
