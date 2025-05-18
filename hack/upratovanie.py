@@ -7,18 +7,17 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfgen.canvas import Canvas
 
 # date configuration
-START_YEAR = 2025
-START_MONTH = 1
-START_DAY = 27
+START_YEAR = None
+START_MONTH = None
+START_DAY = None
 
 # document configuration
-HEADING = "PLÁN UPRATOVANIA"
-HEADING_FONT_SIZE = 36
-
 FONT_NAME = "AgaveNerdFont-Regular.ttf"
 FONT_SIZE = 24
 
-PAGE_SIZE = A4
+HEADING = "PLÁN UPRATOVANIA"
+HEADING_FONT_SIZE = 36
+
 OUTPUT_FILENAME = "upratovanie.pdf"
 
 NAMES = [
