@@ -1,6 +1,6 @@
 """
-Decorators provide a very useful method to add functionality to existing functions and classes. Decorators are functions
-that wrap other functions or classes. Decorators use the @ syntax to “attach” a decorator to a function or class.
+Decorators are functions that wrap other functions or classes. Decorators use the @ syntax
+to modify the behavior of the function or class they decorate.
 """
 
 import functools
@@ -70,9 +70,7 @@ def check_name_length(max_len=30):
     def _check_name_length(cls):
         for name, obj in cls.__dict__.items():
             if callable(obj) and len(name) > max_len:
-                raise NameError(
-                    f"name `{name}` too long, only {max_len} characters are allowed"
-                )
+                raise NameError(f"name `{name}` too long, only {max_len} characters are allowed")
 
         return cls
 

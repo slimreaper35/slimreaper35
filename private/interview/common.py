@@ -1,7 +1,11 @@
-from typing import Iterable
+"""
+This module contains functions that are **always** used in technical interviews.
+"""
+
+from typing import Generator, Iterable
 
 
-def is_palindrome_normal(string: str) -> bool:
+def is_palindrome(string: str) -> bool:
     """
     Check if a string is a palindrome.
 
@@ -18,7 +22,7 @@ def is_palindrome_normal(string: str) -> bool:
 
     return True
 
-    # alternative:
+    # Alternative:
     # return string == string[::-1]
 
 
@@ -29,14 +33,19 @@ def find_intersection(nums1: list[int], nums2: list[int]) -> Iterable[int]:
     return set(nums1) & set(nums2)
 
 
-def fib_infinite():
+#####################################
+# Various Fibonacci implementations #
+#####################################
+
+
+def fib_infinite() -> Generator[int, None, None]:
     """
     A generator that yields the Fibonacci sequence indefinitely.
     """
     a, b = 0, 1
     while True:
         yield a
-        # alternative:
+        # Alternative:
         # a, b = b, a + b
         tmp = a
         a = b

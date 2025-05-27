@@ -1,15 +1,21 @@
 #!/usr/bin/env python3
 
+"""
+Generates a cleaning schedule for a group of people living in the same household.
+"""
+
+__author__ = "Michal Šoltis"
+
 import pendulum
 from reportlab.lib.pagesizes import A4
 from reportlab.pdfbase.pdfmetrics import registerFont
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfgen.canvas import Canvas
 
-# date configuration
-START_YEAR = None
-START_MONTH = None
-START_DAY = None
+# TODO: set date configuration
+START_YEAR: int = ...
+START_MONTH: int = ...
+START_DAY: int = ...
 
 # document configuration
 FONT_NAME = "AgaveNerdFont-Regular.ttf"
