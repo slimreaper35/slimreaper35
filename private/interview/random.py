@@ -171,7 +171,6 @@ def test_cosine_similarity() -> None:
     assert abs(result - expected_cosine_similarity) < tolerance
 
 
-if __name__ == "__main__":
-    test_largest_square()
-    test_cosine_similarity()
-    print("OK")
+test_largest_square()
+test_cosine_similarity()
+print("OK")

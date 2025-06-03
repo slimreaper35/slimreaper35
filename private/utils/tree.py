@@ -113,12 +113,11 @@ def main() -> None:
     postorder_traversal = partial(tree_traversal, technique=postorder)
 
     tree = BSTree()
-    # add nodes to the tree
+    # add nodes to the tree here
 
     inorder_traversal(tree)
     preorder_traversal(tree)
     postorder_traversal(tree)
 
 
-if __name__ == "__main__":
-    main()
+main()

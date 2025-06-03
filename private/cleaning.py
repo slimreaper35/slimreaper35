@@ -2,6 +2,8 @@
 
 """
 Generates a cleaning schedule for a group of people living in the same household.
+
+Dependencies: pendulum, reportlab
 """
 
 __author__ = "Michal Šoltis"
@@ -75,5 +77,4 @@ def main():
     canvas.save()
 
 
-if __name__ == "__main__":
-    main()
+main()

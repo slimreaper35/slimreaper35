@@ -2,20 +2,7 @@ import logging
 
 from rich.logging import RichHandler
 
-LOG_FORMAT = logging.Formatter("%(asctime)s %(levelname)s %(message)s")
-
 log = logging.getLogger(__name__)
-log.setLevel(logging.DEBUG)
-
-# handlers
-file_handler = logging.FileHandler(filename="general.log", mode="w")
-stream_handler = logging.StreamHandler()
-rich_handler = RichHandler(
-    show_time=False,
-    show_level=False,
-    show_path=False,
-    markup=True,
-)
 
 
 def my_filter(record: logging.LogRecord) -> bool:
@@ -25,10 +12,29 @@ def my_filter(record: logging.LogRecord) -> bool:
     return False
 
 
-if __name__ == "__main__":
-    log.addHandler(rich_handler)
-    rich_handler.setFormatter(LOG_FORMAT)
+def setup_logging() -> None:
+    _file_handler = logging.FileHandler(filename="general.log", mode="w")
+    _stream_handler = logging.StreamHandler()
+    _rich_handler = RichHandler(
+        show_time=False,
+        show_level=False,
+        show_path=False,
+        markup=True,
+    )
 
-    log.info("aaa")
-    log.info("bbb")
-    log.info("ccc")
+    log_format = "%(asctime)s %(levelname)s %(message)s"
+    date_format = "%Y-%m-%d %H:%M:%S"
+
+    logging.basicConfig(
+        level=logging.DEBUG,
+        format=log_format,
+        datefmt=date_format,
+        handlers=[_rich_handler],
+    )
+
+
+setup_logging()
+
+log.info("aaa")
+log.warning("bbb")
+log.error("ccc")
