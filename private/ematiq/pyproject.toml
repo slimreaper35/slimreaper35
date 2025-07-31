@@ -1,0 +1,35 @@
+[project]
+name = "ematiq"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+authors = [{ name = "Michal šoltis", email = "soltis.miso@gmail.com" }]
+dependencies = [
+    "cachetools>=6.0.0",
+    "httpx>=0.28.1",
+    "pendulum>=3.1.0",
+    "pydantic>=2.11.5",
+    "python-dotenv>=1.1.0",
+    "websockets>=15.0.1",
+]
+scripts = { "solution" = "service:main" }
+
+[dependency-groups]
+dev = ["ruff>=0.11.12"]
+
+[tool.uv]
+package = true
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "D100", # undocumented-public-module
+    "D104", # undocumented-public-package
+    "D200", # unnecessary-multiline-docstring
+    "D203", # incorrect-blank-line-before-class
+    "D212", # multi-line-summary-first-line
+]
+
+[tool.ruff]
+line-length = 100
