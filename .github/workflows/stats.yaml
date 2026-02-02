@@ -21,7 +21,7 @@ jobs:
         uses: soulteary/github-readme-stats-action@v1.0.0
         with:
           card: stats
-          options: "username=${{ github.repository_owner }}&theme=vue-dark&show_icons=true&show=prs_merged,reviews&hide=contribs&include_all_commits=true&hide_title=true&hide_border=true"
+          options: "username=${{ github.repository_owner }}&theme=vue-dark&show_icons=true&show=prs_merged,reviews&hide=contribs&include_all_commits=true&hide_border=true"
           path: stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
