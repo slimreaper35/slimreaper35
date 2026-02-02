@@ -1,0 +1,34 @@
+name: Update profile README.md
+
+on:
+  workflow_dispatch:
+  # Run daily at midnight except for weekends.
+  schedule:
+    - cron: "0 0 * * 1-5"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout sourcecode
+        uses: actions/checkout@v6
+
+      - name: Generate stats card
+        uses: soulteary/github-readme-stats-action@v1.0.0
+        with:
+          card: stats
+          options: "username=${{ github.repository_owner }}&theme=vue-dark&show_icons=true&show=prs_merged,reviews&hide=contribs&include_all_commits=true&hide_title=true&hide_border=true"
+          path: stats.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit stats card
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "update stats card" || exit 0
+          git push
