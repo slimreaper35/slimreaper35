@@ -2,6 +2,6 @@
 
 ![Profile views](https://komarev.com/ghpvc/?username=slimreaper35)
 
-Don't let anyone steal your dreams. Just keep sleeping.
+Hard work beats talent when talent fails to work hard.
 
 ![GitHub stats](./stats.svg)
