@@ -1,10 +1,10 @@
-name: Update profile README
+name: Update my GitHub profile
 
 on:
   workflow_dispatch:
-  # Run daily at midnight except for weekends.
+  # Run weekly on Tuesday at midnight.
   schedule:
-    - cron: "0 0 * * 1-5"
+    - cron: "0 0 * * 2"
 
 jobs:
   build:
